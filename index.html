@@ -53,18 +53,16 @@
 		<script id="tools" type="text/html">
 		{{#rows}}
 		<div id="{{rowNumber}}" class="tool-box {{#checkedout}}not-{{/checkedout}}available">
-			<span class="tool-box-tool">{{tool}}</span>
+			<span class="tool-box-tool">{{Name}}</span>
 			<div class="tool-box-bottom {{rowNumber}}">
 				{{#checkedout}} <span class="tool-box-borrowed">ON LOAN</span>{{/checkedout}}
 				{{^checkedout}}<a href="mailto:{{owneremail}}?subject=Tool Lending: {{tool}}"><span class="tool-box-borrow btn">BORROW</span></a>{{/checkedout}}
 				<ul>
 					<li><small>WHO / WHERE : </small></li>
-					<li><a href="mailto:{{owneremail}}">{{owner}}</a></li>
-					<li>{{street}}, {{city}}, {{state}}</li>
-					<li><a href="https://maps.google.com/maps?q={{street}},{{city}},{{state}}" target="_blank"><small>MAP</small></a></li>
-					{{#tooldetails}}
-					<li><small>NOTES : </small>{{tooldetails}}</li>
-					{{/tooldetails}}
+					<li>{{Continent}}</li>
+					<li></li>
+					{{History}}
+					<li><small>NOTES : </small>{{Notes}}</li>
 				</ul>
 			</div>
 		</div>
@@ -73,7 +71,7 @@
 
 		<script type="text/javascript">
 		  document.addEventListener('DOMContentLoaded', function() {
-	      var URL = "0AvFUWxii39gXdGxhcjhzYzlBX2pyVFZZU2VjZ3BHZ3c"
+	      var URL = "1GByWMAd4jsBeHn4xRYN4zzD3D6zjOQsFTNO_EPX_mX8"
 	      Tabletop.init( { key: URL, callback: initialize, simpleSheet: true } )
 	    })
 		</script>
